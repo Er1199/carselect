@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+
+		<title>Car Rent</title>
+	</head>
+	<body>
+		<div class="pop-up__container">
+			<div class="pop-up" id="popup">
+				<p class="pop-up__title">Хотите узнать больше?</p>
+				<img class="pop-up__close" src="./icons/icon-x.png" alt="icon x" />
+				<img
+					class="pop-up__recentagle"
+					src="./icons/recentagle.png"
+					alt="recentagle blue"
+				/>
+				<strong class="pop-up__subtitle"
+					>Получите консультацию по телефону. Звоните!</strong
+				>
+				<ul class="pop-up__contacts">
+					<li><a href="tel:+79067991660">+7 (906) 799-16-60</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="contacts">
+			<div class="contacts__content">
+				<img src="./img/cotacts/phone.png" alt="" class="phone" />
+				<a href="https://t.me/carsselect" class="telegram">
+					<img src="./img/cotacts/telegram.png" alt="" />
+				</a>
+
+				<a href="tel:+7 (926) 189-18-18" class="whatsapp">
+					<img src="./img/cotacts/whatsapp.png" alt="" />
+				</a>
+				<a href="https://vk.com/carsselect" class="vk">
+					<img src="./img/cotacts/vk.png" alt="" />
+				</a>
+			</div>
+		</div>
+
+		<div class="wrapper" id="home">
+			<header id="header">
+				<div class="container">
+					<div class="header__wrapper">
+						<a href="/" class="header__logo">
+							<img src="./img/logo.png" alt="logo" />
+						</a>
+						<div class="header__nav">
+							<nav class="nav header__desc">
+								<ul class="header__list">
+									<li class="header__list__item">
+										<a href="#home">Главный</a>
+									</li>
+									<li class="header__list__item">
+										<a href="#footer">Контакты</a>
+									</li>
+									<li class="header__list__item">
+										<a href="#service">Сервис</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="header__right">
+								<a href="tel:+79067991660">Консултация</a>
+								<div class="header__burger">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="main__container">
+					<div class="container">
+						<div class="main__desc">
+							<p class="main__desc__title">
+								Выберите вашу машину в <span>CarsSelect</span>
+							</p>
+							<p class="main__desc__text">
+								Мы находимся на рынке автопродаж уже 6 лет и с уверенностью
+								заявляем, что готовы оказать вам поддержку не только в выборе
+								подходящего автомобиля, но и в вопросах логистики. Ваш
+								автомобиль прибудет к вам целым и невредимым. Мы осуществляем
+								свою деятельность в рамках всего СНГ.
+							</p>
+							<div class="main__desc__btn">
+								<a href="tel:+79261891818">Позвоните</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/////////////// will be changed ////////////////////-->
+				<div class="slider__container">
+					<div class="slider__title">
+						Это всего лишь примеры – вы можете заказать любой автомобиль из США,
+						Европы, Дубая или Японии. У нас
+					</div>
+					<p class="slider__subtitle">машины под заказ</p>
+					<div class="slider__wrapper">
+						<div class="slider">
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-1">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Porsche</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-2">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">BMW</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-3">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Mercedes-Benz</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-4">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Audi</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-5">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Volkswagen</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-6">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Toyota</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-7">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Lexus</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-8">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Mazda</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-9">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Mitsubishi</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-10">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Honda</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-11">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Kia</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-12">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Hyundai</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-13">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Volvo</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-14">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Dodge</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-15">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Ford</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item__car_photo slide-16">
+									<p class="slider__item__car_year">Лучшие Цены</p>
+									<p class="slider__item__car_state">СКИДКА</p>
+								</div>
+								<div class="slider__item__desc">
+									<p class="slider__item__car_name">Chevrolet</p>
+									<p class="slider__item__car_value">
+										<i class="fa-solid fa-star"></i> <span>(5.0)</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="car__select__container">
+					<div class="container">
+						<div class="car__select__content">
+							<p class="car__select__title">CARSELECT</p>
+							<p class="car__select__subtitle">наШЕ ПРЕМУШЕСТВА</p>
+							<div class="car__content__container">
+								<div class="car__select__main">
+									<div class="car__select__main__background">
+										<p class="car__select__main__title">carselect</p>
+										<p class="car__select__main__subtitle">
+											Почему вибырать нас ?
+										</p>
+										<p class="car__select__main__desc">
+											Общее внимание к деталям, разнообразие выбора и
+											комплексный подход делают услуги компании привлекательными
+											для тех, кто ищет качественный и надежный автомобиль из
+											США.
+										</p>
+									</div>
+									<img
+										src="./img/car-select-abs.png"
+										alt=""
+										class="car__select__main__bottom_car"
+									/>
+								</div>
+								<div class="car__select__secondary">
+									<div class="car__select__secondary__item secondary__item-1">
+										<img src="./img/car-select/Layer.png" alt="" />
+										<p>Прозрачные и конкурентоспособные цены</p>
+									</div>
+									<div class="car__select__secondary__item secondary__item-2">
+										<img src="./img/car-select/Layer_2.png" alt="" />
+										<p>Полный цикл обслуживания</p>
+									</div>
+									<div class="car__select__secondary__item secondary__item-3">
+										<img src="./img/car-select/Layer_3.png" alt="" />
+										<p>Прозрачные и конкурентоспособные цены</p>
+									</div>
+									<div class="car__select__secondary__item secondary__item-4">
+										<img src="./img/car-select/Layer_4.png" alt="" />
+										<p>Индивидуальный подход</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="service" class="car__repair__container">
+					<div class="container">
+						<div class="car__repair__content">
+							<p class="car__repair__content__title">
+								Выполняем ремонт поврежденных автомобилей
+							</p>
+							<p class="car__repair__content__subtitle">
+								который вы у нас заказали
+							</p>
+							<div class="car__repair__options__container">
+								<div class="car__repair__option repair__option_1">
+									<div class="repair__option__bg"></div>
+									<p class="repair__title">Ремонт мотора</p>
+								</div>
+								<div class="car__repair__option repair__option_2">
+									<div class="repair__option__bg"></div>
+									<p class="repair__title">Кузовной ремонт</p>
+								</div>
+								<div class="car__repair__option repair__option_3">
+									<div class="repair__option__bg"></div>
+									<p class="repair__title">Ремонт ходовой части</p>
+								</div>
+								<div class="car__repair__option repair__option_4">
+									<div class="repair__option__bg"></div>
+									<p class="repair__title">Диагностика автомобиля</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="get__cars__container">
+					<div class="container">
+						<div class="get__cars__content">
+							<div class="get__cars__descr">
+								<p class="get__cars__desc__title">
+									МЫ ПОМОЖЕМ ВАМ ЛЕГКО НАЙТИ СЛЕДУЮЩИЙ АВТОМОБИЛЬ
+								</p>
+								<p class="get__cars__desc__subtitle">
+									Как ваша мaшина <span> доходит до вас ?</span>
+								</p>
+								<ul class="get__cars__list">
+									<li>Цены на подбор/выкуп</li>
+									<li>- бюджетный класс до 10.000$ - от 700$</li>
+									<li>- средний класс до 20.000$ - от 1000$</li>
+									<li>- премиум/бизнес - от 1500$</li>
+									<li>
+										Инвойс (чек) за автомобиль оплачивается в течении 2х дней
+										после выигрыша на аукционе. Один из способов онлайн оплаты
+										korona pay. В инвойс включена стоимость авто и аукционный
+										сбор.
+									</li>
+									<li>
+										🚢В среднем доставка авто до порта Грузии занимает от 2.5 до
+										3х месяцев, доставка в Армению 4 месяца, Доставку можно
+										оплатить по прибытию.
+									</li>
+									<li>
+										Стоимость доставки в порт Грузии от 1500 до 2500$ в
+										республику Армении + 400$ Машину вы можете забрать как
+										самостоятельно так и воспользоваться нашими услугами
+										перегона и оформления, растаможки.
+									</li>
+									<li>Цены на доп. услуги обсуждаются отдельно.</li>
+									<li>
+										Так же Привезем авто из Европы или осуществим подбор в
+										России
+									</li>
+								</ul>
+							</div>
+							<div class="get__cars__imgs">
+								<div class="get__cars__img__container">
+									<img
+										src="./img/get-cars/get-car-1.png"
+										alt=""
+										class="get__car__item__img"
+									/>
+								</div>
+								<div class="get__cars__img__container">
+									<img
+										src="./img/get-cars/get-car-2.png"
+										alt=""
+										class="get__car__item__img"
+									/>
+								</div>
+								<div class="get__cars__img__container">
+									<img
+										src="./img/get-cars/get-car-3.png"
+										alt=""
+										class="get__car__item__img"
+									/>
+								</div>
+								<div class="get__cars__img__container">
+									<img
+										src="./img/get-cars/get-car-4.png"
+										alt=""
+										class="get__car__item__img"
+									/>
+									class="get__car__item__img" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="payment__segment__container">
+					<div class="container">
+						<div class="payment__segment__content">
+							<p class="payment__segment__title">CARSELECT</p>
+							<p class="payment__segment__subtitle">Ценовой сегмент</p>
+							<div class="payment__segment__items">
+								<div class="payment__segment__item payment__segment__item_1">
+									<p class="payment__segment__item__title">
+										Personalized Service
+									</p>
+									<p class="payment__segment__item__desc">
+										Lorem Ipsum is simply dummy text of the printing and
+										typesetting industry.
+									</p>
+								</div>
+								<div class="payment__segment__item payment__segment__item_2">
+									<p class="payment__segment__item__title">24/7 Support</p>
+									<p class="payment__segment__item__desc">
+										Lorem Ipsum is simply dummy text of the printing and
+										typesetting industry.
+									</p>
+								</div>
+								<div class="payment__segment__item payment__segment__item_3">
+									<p class="payment__segment__item__title">Best Price</p>
+									<p class="payment__segment__item__desc">
+										Lorem Ipsum is simply dummy text of the printing and
+										typesetting industry.
+									</p>
+								</div>
+								<div class="payment__segment__item payment__segment__item_4">
+									<p class="payment__segment__item__title">Trusted Company</p>
+									<p class="payment__segment__item__desc">
+										Lorem Ipsum is simply dummy text of the printing and
+										typesetting industry.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="car__types__container">
+					<div class="car__types__content">
+						<img src="./img/car-types/car-type-1.png" alt="" />
+						<img src="./img/car-types/car-type-2.png" alt="" />
+						<img src="./img/car-types/car-type-1.png" alt="" />
+						<img src="./img/car-types/car-type-2.png" alt="" />
+						<img src="./img/car-types/car-type-3.png" alt="" />
+						<img src="./img/car-types/car-type-4.png" alt="" />
+					</div>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="container">
+					<div class="footer__content">
+						<div class="about__us">
+							<p class="about__us__title">О нас</p>
+							<p class="about__us__subtitle">Автомобили из США под заказ</p>
+							<p class="about__us__desc">
+								За плечами большой опыт в автосфере , подходим к каждому заказу
+								индивидуально, подбираем как себе. Любой
+								автомобиль/мотоцикл/автодом с аукционов США (Copart, IAAI). А
+								так же новые и целые машины. В основном занимаемся подбором
+								автомобилей с целой безопасностью, не значительными
+								повреждениями, на ходу и минимальным пробегом.
+							</p>
+						</div>
+						<div class="footer__contacts">
+							<p class="footer__contacts__title">Контакты</p>
+							<ul>
+								<li>+79067991660</li>
+								<li>г. Москва, ул. Линкольна / 15</li>
+								<li>carselect@gmail.com</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rights-reserved">
+						<span>© CarsSelect - 2024 | All Right Reserved. Web Site By</span>
+						<a class="techmind" href="https://techmind.am/">TechMind</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="./main.js"></script>
+	</body>
+</html>

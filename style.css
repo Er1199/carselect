@@ -1,0 +1,1561 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: var(--white);
+	font-weight: 300;
+	overflow-x: hidden;
+	scroll-padding: 20px;
+}
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: red;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+	background: #ccc;
+}
+ul {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+header,
+main,
+footer {
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 2125px;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container {
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
+.pop-up__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+}
+
+.pop-up__container.active {
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 10000;
+}
+
+.pop-up {
+	width: 600px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	z-index: 100000;
+	padding: 35px 25px;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.pop-up__recentagle {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 139px;
+}
+
+.pop-up__title {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 130%;
+	margin-bottom: 20px;
+}
+
+.pop-up__subtitle {
+	display: block;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 130%;
+	margin-bottom: 20px;
+}
+
+.pop-up__contacts {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pop-up__contacts li a {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
+	color: var(--color-blue);
+}
+
+header {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	background: red;
+	max-width: 2125px;
+	transform: translateX(-50%);
+	background: #870000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#190a05,
+		#870000
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#190a05,
+		#870000
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	z-index: 100;
+}
+
+.header__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.header__list {
+	display: flex;
+	align-items: center;
+}
+
+.header__burger {
+	display: none;
+}
+
+.header__nav,
+.header__right {
+	display: flex;
+	align-items: center;
+}
+
+.header__right {
+	gap: 55px;
+}
+
+.header__right a {
+	color: #fff;
+	background: #111;
+	padding: 7px 30px;
+	border-radius: 5px;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 25.2px;
+	margin-left: 50px;
+	transition: all 0.3s ease;
+}
+
+.main__desc__btn a {
+	display: inline-block;
+	background: #f00;
+	padding: 14px 30px;
+	border-radius: 5px;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+.header__list__item a {
+	color: #fff;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25.2px;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 10px 15px;
+	transition: all 0.3s ease;
+	margin: 0 10px;
+}
+
+.header__burger {
+	display: none;
+}
+
+.main__container {
+	min-height: 100vh;
+	background: url('./img/main-desc-img.png') no-repeat center/cover;
+}
+
+.main__desc {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1000px;
+}
+
+.main__desc__title {
+	max-width: 620px;
+	color: #fff;
+	font-size: 62px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	letter-spacing: -1.24px;
+}
+
+.main__desc__title span {
+	color: #f00;
+}
+
+.main__desc__text {
+	margin-top: 20px;
+	color: #fff;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 158.824%;
+}
+
+.main__desc__btn {
+	margin-top: 40px;
+}
+
+.slider__wrapper {
+	padding: 70px 0;
+	overflow-x: hidden;
+}
+
+.my-slider {
+	padding: 0 70px;
+}
+
+.slick-initialized .slick-slide {
+	width: 405px;
+	border-radius: 15px;
+	background: #fff;
+	margin: 0 35px;
+}
+
+.slick-next,
+.slick-prev {
+	z-index: 5 !important;
+}
+
+.slick-next {
+	right: 40px !important;
+}
+
+.slick-prev {
+	left: 15px !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+	/* color: #000 !important; */
+	font-size: 26px !important;
+}
+
+.slider__container {
+	padding: 50px 0;
+	width: 100%;
+	background: url('./img/slider-bg.png') no-repeat center/cover;
+}
+
+.slider__title {
+	margin: auto;
+	max-width: 1440px;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 53px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.slider__subtitle {
+	color: #f00;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 115% */
+	text-transform: uppercase;
+}
+
+.slider__item__car_photo {
+	width: 100%;
+	height: 270px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 15px 15px 0 0;
+	padding: 20px 10px;
+}
+
+.slide-1 {
+	background-image: url('./img/cars/porsche.jpg');
+}
+
+.slide-2 {
+	background-image: url('./img/cars/bmw.jpg');
+}
+
+.slide-3 {
+	background-image: url('./img/cars/mercedes-benz.jpg');
+}
+
+.slide-4 {
+	background-image: url('./img/cars/audi.jpg');
+}
+
+.slide-5 {
+	background-image: url('./img/cars/volkswagen.jpg');
+}
+
+.slide-6 {
+	background-image: url('./img/cars/toyota.jpg');
+}
+
+.slide-7 {
+	background-image: url('./img/cars/lexus.jpg');
+}
+
+.slide-8 {
+	background-image: url('./img/cars/mazda.jpg');
+}
+
+.slide-9 {
+	background-image: url('./img/cars/mitsubishi.jpg');
+}
+
+.slide-10 {
+	background-image: url('./img/cars/honda.jpg');
+}
+
+.slide-11 {
+	background-image: url('./img/cars/kia.jpg');
+}
+
+.slide-12 {
+	background-image: url('./img/cars/hyundai.jpg');
+}
+
+.slide-13 {
+	background-image: url('./img/cars/volvo.jpg');
+}
+
+.slide-14 {
+	background-image: url('./img/cars/dodge.jpg');
+}
+
+.slide-15 {
+	background-image: url('./img/cars/ford.jpg');
+}
+
+.slide-16 {
+	background-image: url('./img/cars/chevrolet.jpg');
+}
+
+.slider__item__car_year,
+.slider__item__car_state {
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	display: flex;
+	padding: 2px 10px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+
+.slider__item__car_year {
+	max-width: 100px;
+	background: #242424;
+}
+
+.slider__item__car_state {
+	max-width: 84px;
+	background: #ff0000;
+	margin-top: 10px;
+	white-space: nowrap;
+}
+
+.slider__item__desc {
+	padding: 10px 15px;
+}
+
+.slider__item__car_name {
+	color: #201f1d;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.slider__item__car_value span {
+	color: #737373;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22.5px; /* 150% */
+}
+
+.slider__item__car_value i {
+	color: #ff9307;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 14px;
+}
+
+.slick-dots {
+	bottom: -70px !important;
+}
+
+.slick-dots li {
+	width: 25px;
+	height: 25px;
+	border-radius: 30px;
+	background: #fff;
+	margin-bottom: 10px !important;
+}
+
+.slick-dots li button:before {
+	color: unset !important;
+}
+
+.slick-dots li.slick-active {
+	max-width: 25px;
+	max-height: 25px;
+	outline: 2px solid #fff;
+	background: #000 !important;
+}
+
+.car__select__content {
+	padding: 20px 0;
+}
+
+.car__content__container {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	gap: 30px;
+}
+
+.car__select__main__bottom_car {
+	margin: -171px auto 0 190px;
+}
+
+.car__select__main {
+	position: relative;
+	width: 782px;
+	height: 536px;
+	background: url('./img/car-select-main.png') no-repeat center/cover;
+}
+
+.car__select__main__background {
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 0, 0, 0.8);
+	padding: 88px 78px 0 188px;
+}
+
+.car__select__title {
+	color: #ff0000;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 43.7px; /* 218.5% */
+	text-transform: lowercase;
+}
+
+.car__select__subtitle {
+	color: #000;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 115% */
+	text-transform: uppercase;
+}
+
+.car__select__main__title {
+	color: #fff;
+	font-family: 'Arimo', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24.268px; /* 173.34% */
+	text-transform: uppercase;
+}
+
+.car__select__main__subtitle {
+	max-width: 400px;
+	color: #fff;
+	font-family: 'Arimo', sans-serif;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 115% */
+	text-transform: uppercase;
+}
+
+.car__select__main__desc {
+	color: #fff;
+	font-family: 'Arimo', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+	margin-top: 35px;
+}
+
+.car__select__secondary__item {
+	height: 260px;
+	padding: 29px 45px;
+}
+
+.car__select__secondary {
+	width: 825px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.car__select__secondary__item {
+	flex: 0 1 48%;
+}
+
+.secondary__item-1,
+.secondary__item-4 {
+	background: #f00;
+}
+
+.secondary__item-3,
+.secondary__item-2 {
+	background: #000;
+}
+
+.car__select__secondary__item p {
+	margin-top: 10px;
+	color: #fff;
+	font-family: 'Arimo', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 31.201px;
+}
+
+.car__repair__container {
+	margin-top: 80px;
+	padding: 80px 0;
+	height: 100%;
+	background: url('./img/service.png') no-repeat center/cover;
+}
+
+.car__repair__content__title {
+	color: #fff;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 43.7px; /* 145.667% */
+	text-transform: uppercase;
+}
+
+.car__repair__content__subtitle {
+	color: #f00;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 115% */
+	text-transform: uppercase;
+}
+
+.car__repair__option {
+	display: flex;
+	flex: 0 1 25%;
+	max-width: 252px;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+}
+
+.repair__option_1,
+.repair__option_3 {
+	background: #f00;
+}
+
+.repair__option_2,
+.repair__option_4 {
+	background: #000;
+}
+
+.car__repair__options__container {
+	margin: 50px auto 0 auto;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	max-width: 1500px;
+}
+
+.repair__option__bg {
+	width: 100%;
+	height: 250px;
+	border-radius: 10px 10px 0 0;
+}
+
+.repair__option_1 .repair__option__bg {
+	background: url('./img/services/motor.jpg') no-repeat center/cover;
+}
+
+.repair__option_2 .repair__option__bg {
+	background: url('./img/services/kuzov.jpg') no-repeat center/cover;
+}
+
+.repair__option_3 .repair__option__bg {
+	background: url('./img/services/xodovoy.jpg') no-repeat center/cover;
+}
+
+.repair__option_4 .repair__option__bg {
+	background: url('./img/services/diagnostika.jpg') no-repeat center/cover;
+}
+
+.car__repair__option p {
+	color: #fff;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	padding: 10px 0;
+	width: 100%;
+}
+
+.get__cars__container {
+	width: 100%;
+	margin-top: 60px;
+}
+
+.get__cars__content {
+	border-radius: 20px;
+	background: #000;
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	padding: 50px 80px;
+}
+
+.get__cars__descr {
+	flex: 0 1 48%;
+}
+
+.get__cars__imgs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	flex: 0 1 48%;
+}
+
+.get__cars__img__container {
+	flex: 0 1 48%;
+}
+
+.get__cars__img__container img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.get__cars__desc__title {
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25.2px;
+}
+
+.get__cars__desc__subtitle {
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 115% */
+	text-transform: uppercase;
+	margin: 10px 0 40px 0;
+}
+
+.get__cars__desc__subtitle span {
+	color: #f00;
+}
+
+.get__cars__list li {
+	color: #fff;
+	text-align: justify;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.payment__segment__container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.payment__segment__content {
+	width: 100%;
+}
+
+.payment__segment__title {
+	color: #f00;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 43.7px; /* 218.5% */
+	text-transform: lowercase;
+}
+
+.payment__segment__subtitle {
+	color: #000;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 49px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 89.184% */
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 35px;
+}
+
+.payment__segment__items {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+.payment__segment__item {
+	width: 100%;
+	padding: 29px 43px;
+}
+
+.payment__segment__item_1,
+.payment__segment__item_4 {
+	background: #f00;
+}
+
+.payment__segment__item_2,
+.payment__segment__item_3 {
+	background: #000;
+}
+
+.payment__segment__item__title {
+	color: #fff;
+	font-family: 'Arimo', sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 31px;
+}
+
+.payment__segment__item__desc {
+	max-width: 260px;
+	color: #fff;
+	font-family: 'Arimo', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+.car__types__container {
+	width: 100%;
+	overflow-x: auto;
+	margin-top: 75px;
+	padding: 10px 0;
+}
+
+.car__types__container::-webkit-scrollbar {
+	height: 5px;
+}
+.car__types__container::-webkit-scrollbar-thumb {
+	background: red;
+}
+.car__types__container::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.car__types__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 78px;
+}
+
+footer {
+	margin-top: 100px;
+	background: #000;
+	padding: 80px 0;
+}
+
+.footer__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.about__us {
+	max-width: 381px;
+}
+
+.footer__contacts {
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.about__us__title,
+.footer__contacts__title {
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 43.7px; /* 174.8% */
+	text-transform: uppercase;
+	position: relative;
+}
+
+.about__us__title::before,
+.footer__contacts__title::before {
+	content: '';
+	position: absolute;
+	width: 80px;
+	height: 2px;
+	background: #fff;
+	bottom: -20px;
+}
+
+.about__us__subtitle {
+	margin: 40px 0 20px 0;
+}
+
+.about__us__subtitle,
+.about__us__desc,
+.footer__contacts ul {
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25.2px;
+}
+
+.footer__contacts ul {
+	margin-top: 20px;
+}
+
+.footer__media {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.footer__media a {
+	width: 36px;
+	height: 36px;
+	border: 1px solid #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.contacts {
+	position: fixed;
+	bottom: 76px;
+	z-index: 10000;
+}
+
+.contacts img {
+	width: 50px;
+	height: 50px;
+}
+
+.contacts a,
+.phone {
+	color: transparent;
+	position: absolute;
+	left: 50px;
+	cursor: pointer;
+	transition: 0.3s linear;
+}
+
+.contacts a {
+	opacity: 0;
+}
+
+.contacts__content:hover a {
+	opacity: 1;
+}
+
+.phone {
+	z-index: 10;
+}
+
+.contacts__content:hover .telegram {
+	transform: translate(60px, 10px);
+}
+
+.contacts__content:hover .whatsapp {
+	transform: translate(50px, -50px);
+}
+
+.contacts__content:hover .vk {
+	transform: translate(-10px, -55px);
+}
+
+.rights-reserved {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	background: #f00;
+	max-width: 1200px;
+	margin: 20px auto 0 auto;
+}
+
+.techmind {
+	display: inline-block;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 15px;
+	margin-left: 10px;
+	transition: all 0.3s ease;
+}
+@media screen and (max-width: 1643px) and (min-width: 1444px) {
+	.slick-initialized .slick-slide {
+		margin: 0 10px;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.car__content__container {
+		flex-wrap: wrap;
+	}
+
+	.car__select__main,
+	.car__select__secondary {
+		width: 100%;
+	}
+
+	.car__select__main__bottom_car {
+		margin: -207px auto 0 190px;
+	}
+
+	.car__select__secondary {
+		gap: 43px;
+	}
+
+	.get__cars__img__container {
+		flex: 0 1 47%;
+	}
+
+	.get__cars__content {
+		gap: 40px;
+		padding: 50px 36px;
+	}
+
+	.get__cars__desc__subtitle {
+		font-size: 21px;
+		margin-bottom: 20px;
+	}
+	.car__types__content {
+		gap: 22px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.car__select__secondary__item {
+		flex: 0 1 49%;
+	}
+
+	.car__select__secondary {
+		gap: 18px;
+	}
+
+	.car__repair__options__container {
+		flex-wrap: wrap;
+	}
+
+	.car__repair__option {
+		flex: 0 1 48%;
+	}
+
+	.get__cars__content {
+		flex-direction: column;
+	}
+	.car__types__content {
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.car__select__secondary__item {
+		flex: 0 1 48%;
+	}
+
+	.car__select__main__bottom_car {
+		width: 326px;
+	}
+
+	.car__select__main__background {
+		padding: 48px;
+	}
+
+	.car__select__subtitle {
+		font-size: 30px;
+	}
+	.payment__segment__subtitle {
+		font-size: 30px;
+	}
+	.pop-up {
+		width: 500px;
+	}
+
+	.pop-up__title {
+		font-size: 17px;
+	}
+
+	.pop-up__subtitle {
+		font-size: 24px;
+	}
+
+	.pop-up__contacts li a {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header__wrapper {
+		height: 60px;
+		padding: 0;
+	}
+
+	.header__logo {
+		display: block;
+		width: 60px;
+		height: 60px;
+	}
+
+	.header__logo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.header__burger {
+		position: relative;
+		display: block;
+		width: 36px;
+		height: 24px;
+		z-index: 4;
+		cursor: pointer;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+
+	.header__burger::before,
+	.header__burger::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		border-radius: 3px;
+		background-color: #fff;
+		-webkit-transition: 0.3s ease;
+		transition: 0.3s ease;
+	}
+
+	.header__burger::before {
+		top: 0;
+	}
+
+	.header__burger::after {
+		bottom: 0;
+	}
+
+	.header__burger span {
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		top: 11px;
+		border-radius: 3px;
+		background-color: #fff;
+		-webkit-transition: 0.3s ease;
+		transition: 0.3s ease;
+	}
+
+	.header__burger.active:before {
+		top: 10px;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	.header__burger.active::after {
+		bottom: 12px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.header__burger.active span {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	.header__right {
+		gap: 25px;
+	}
+
+	.header__right a {
+		margin-left: 20px;
+	}
+
+	.nav {
+		position: fixed;
+		width: 300px;
+		height: calc(100vh);
+		right: -150%;
+		top: 0;
+		overflow: auto;
+		z-index: 3;
+		-webkit-transition: all 0.3s ease-in;
+		transition: all 0.3s ease-in;
+		background-color: #fff;
+		flex-direction: column;
+		background: #870000; /* fallback for old browsers */
+		background: -webkit-linear-gradient(
+			to right,
+			#190a05,
+			#870000
+		); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to right,
+			#190a05,
+			#870000
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	.nav.active {
+		right: 0;
+	}
+
+	.nav ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 0px 30px 0px;
+		height: 100%;
+	}
+
+	.nav ul li {
+		margin: 0 0 60px 0;
+	}
+
+	.nav ul li a {
+		font-size: 20px;
+		padding: 10px;
+		letter-spacing: 1.8px;
+	}
+
+	.main__desc__title {
+		font-size: 46px;
+	}
+
+	.slider__container {
+		padding: 25px 0;
+	}
+
+	.slider__title {
+		font-size: 23px;
+		line-height: 45px;
+	}
+
+	.slider__subtitle {
+		font-size: 31px;
+	}
+
+	.car__select__main__subtitle {
+		font-size: 28px;
+	}
+
+	.car__select__main__bottom_car {
+		margin: -220px auto 0 130px;
+		width: 381px;
+	}
+
+	.car__select__secondary__item {
+		flex: 1 1 100%;
+		height: auto;
+	}
+
+	.car__repair__container {
+		margin-top: 20px;
+	}
+
+	.car__repair__content__title,
+	.car__repair__content__subtitle {
+		font-size: 22px;
+	}
+
+	.car__repair__options__container {
+		margin-top: 10px;
+	}
+
+	.car__repair__option {
+		flex: 0 1 47%;
+	}
+	.payment__segment__item {
+		font-size: 15px;
+	}
+
+	footer {
+		margin-top: 30px;
+	}
+	.footer__content {
+		flex-direction: column;
+	}
+	.about__us {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 576px) {
+	.pop-up {
+		width: 280px;
+	}
+
+	.pop-up__title {
+		font-size: 12px;
+		margin-bottom: 15px;
+	}
+
+	.pop-up__subtitle {
+		font-size: 14px;
+		max-width: 182px;
+		margin-bottom: 15px;
+	}
+	.pop-up__recentagle {
+		width: 80px;
+	}
+
+	.pop-up__contacts {
+		flex-direction: column;
+	}
+
+	.pop-up__contacts li {
+		margin-bottom: 20px;
+	}
+
+	.pop-up__contacts li a {
+		font-size: 16px;
+	}
+
+	.container {
+		max-width: 100%;
+		padding: 0 10px;
+	}
+
+	.header__right a {
+		padding: 7px 18px;
+	}
+
+	.main__desc__title {
+		font-size: 33px;
+	}
+
+	.main__desc__text {
+		font-size: 16px;
+	}
+
+	.main__desc__btn {
+		margin-top: 20px;
+	}
+
+	.slider__title {
+		font-size: 19px;
+		line-height: 40px;
+	}
+
+	.slider__subtitle {
+		font-size: 25px;
+	}
+
+	.slider__wrapper {
+		padding: 40px 0;
+	}
+
+	.slick-next {
+		right: 14px !important;
+	}
+
+	.slick-prev {
+		left: 8px !important;
+	}
+
+	.car__select__main__background {
+		padding: 20px;
+	}
+
+	.car__select__main__desc {
+		margin-top: 20px;
+	}
+
+	.car__select__main {
+		height: 400px;
+	}
+
+	.car__select__main__subtitle {
+		font-size: 20px;
+		line-height: 31.7px;
+	}
+
+	.car__select__main__bottom_car {
+		margin: -200px 0px 0 25px;
+		width: 191px;
+	}
+
+	.car__select__subtitle {
+		font-size: 24px;
+	}
+
+	.car__content__container {
+		margin-top: 20px;
+	}
+
+	.car__select__secondary__item {
+		padding: 22px 15px;
+	}
+
+	.car__repair__option {
+		flex: 0 1 100%;
+	}
+
+	.car__repair__container {
+		padding: 15px 0;
+	}
+
+	.get__cars__img__container {
+		flex: 0 1 100%;
+	}
+
+	.get__cars__img__container img {
+		object-fit: contain;
+		height: 190px;
+	}
+
+	.get__cars__content {
+		padding: 10px 0;
+		border-radius: 0px;
+	}
+	.get__cars__imgs {
+		gap: 20px;
+	}
+	.get__cars__container {
+		background: #000;
+		margin-top: 20px;
+	}
+	.payment__segment__subtitle {
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+	.payment__segment__item {
+		padding: 20px;
+	}
+	.payment__segment__container {
+		margin-top: 30px;
+	}
+	.car__types__content img {
+		width: 98px;
+	}
+	.car__types__container {
+		margin-top: 30px;
+	}
+	.rights-reserved {
+		flex-direction: column;
+	}
+	.rights-reserved span {
+		font-size: 11px;
+	}
+	.techmind {
+		margin: 10px 0 0 0;
+		font-size: 13px;
+	}
+	.contacts {
+		left: -29px;
+	}
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+		padding: 0 25px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+
+	.header__list__item a:hover {
+		background: #fff;
+		color: #000;
+	}
+
+	.header__right a:hover {
+		background: #fff;
+		color: #000;
+	}
+
+	.main__desc__btn a:hover {
+		background-color: rgb(255 0 0 / 64%);
+	}
+	.techmind:hover {
+		background-color: #004883;
+		color: #fff;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		max-width: 1400px;
+	}
+}
+
+@media (min-width: 1800px) {
+	.container {
+		max-width: 2125px;
+	}
+}
+.dot {
+	background-color: white;
+	height: 70px;
+	width: 100px;
+	border-radius: 10%;
+	padding: initial;
+}
